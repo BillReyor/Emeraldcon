@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  background: #0d0d0d;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero {
+  background: radial-gradient(circle at top, #102030, #000);
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #0ff;
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #222;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #0ff;
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li::marker {
+  color: #0ff;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fafafa;
+    color: #222;
+  }
+  .hero {
+    background: linear-gradient(135deg, #b2dfdb, #80cbc4);
+    color: #004d40;
+  }
+  .hero h1 {
+    text-shadow: none;
+  }
+  .hero h2 {
+    color: #00695c;
+  }
+  .card {
+    background: #fff;
+    border-color: #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .card h3 {
+    color: #00695c;
+  }
+  footer {
+    background: #e0f2f1;
+    color: #004d40;
+  }
+}
