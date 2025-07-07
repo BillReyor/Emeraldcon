@@ -69,6 +69,44 @@ main {
   color: #ff4d4d;
 }
 
+.v-logo {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1rem;
+}
+
+.v-logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 160px;
+  height: 160px;
+  border: 6px solid #ff4d4d;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+}
+
+.v-logo::after {
+  content: "V";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-family: 'Cinzel', serif;
+  font-size: 120px;
+  line-height: 160px;
+  text-align: center;
+  color: #ff4d4d;
+  text-shadow: 0 0 20px rgba(255, 77, 77, 0.8);
+}
+
 footer {
   text-align: center;
   padding: 1rem;
