@@ -1,40 +1,78 @@
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #e0e0e0;
+  --accent-color: #009b4c;
+  --accent-light: #1aff88;
+  --card-bg: #111;
+  --card-border: #222;
+}
+
 body {
   margin: 0;
   font-family: 'Fira Code', monospace;
-  background: #0d0d0d;
-  color: #e0e0e0;
+  background: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-
-.hero {
-  background: radial-gradient(circle at top, #300, #000);
-  text-align: center;
-  padding: 4rem 1rem;
-  color: #ff4d4d;
+/* subtle grit pattern */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 4px);
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
 }
 
+.hero {
+  background: radial-gradient(circle at top, #002b13, #000);
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--accent-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.7));
+}
 
 .hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 3rem;
+  font-family: 'Irish Grover', cursive;
+  font-size: 3.5rem;
   margin: 0;
-  text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d;
+  color: var(--accent-light);
+  text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+  position: relative;
+  z-index: 1;
 }
 
 .hero h2 {
   font-size: 1.5rem;
-  color: #eee;
-  text-shadow: 0 0 5px #ff4d4d;
+  color: var(--text-color);
+  text-shadow: 0 0 5px var(--accent-color);
+  position: relative;
+  z-index: 1;
 }
+
 .tagline {
   font-family: 'Cinzel', serif;
-  color: #ff4d4d;
+  color: var(--accent-light);
   margin-top: 0.5rem;
   font-style: italic;
+  position: relative;
+  z-index: 1;
 }
 
 main {
@@ -45,28 +83,32 @@ main {
 }
 
 .card {
-  background: #111;
-  border: 1px solid #222;
-  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 8px;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.02);
 }
 
 .card h3 {
   font-family: 'Orbitron', sans-serif;
-  color: #0ff;
+  color: var(--accent-light);
   margin-top: 0;
 }
 
 .v-theme {
-  background: linear-gradient(135deg, rgba(92, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
-  border-color: #5c0000;
-  box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
+  background: linear-gradient(135deg, rgba(0, 100, 50, 0.8), rgba(0, 0, 0, 0.9));
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
 }
 
 .v-theme h3 {
-  color: #ff4d4d;
+  color: var(--accent-light);
 }
 
 .v-logo {
@@ -86,9 +128,9 @@ main {
   margin: auto;
   width: 160px;
   height: 160px;
-  border: 6px solid #ff4d4d;
+  border: 6px solid var(--accent-light);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.6);
 }
 
 .v-logo::after {
@@ -103,8 +145,8 @@ main {
   font-size: 120px;
   line-height: 160px;
   text-align: center;
-  color: #ff4d4d;
-  text-shadow: 0 0 20px rgba(255, 77, 77, 0.8);
+  color: var(--accent-light);
+  text-shadow: 0 0 20px rgba(0, 255, 128, 0.8);
 }
 
 footer {
@@ -120,7 +162,7 @@ ul {
 }
 
 li::marker {
-  color: #0ff;
+  color: var(--accent-light);
 }
 
 @media (prefers-color-scheme: light) {
@@ -129,18 +171,17 @@ li::marker {
     color: #222;
   }
   .hero {
-    background: linear-gradient(135deg, #ffebee, #ffcdd2);
-    color: #b71c1c;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: var(--accent-color);
   }
   .hero h1 {
     text-shadow: none;
-    font-family: 'Cinzel', serif;
   }
   .hero h2 {
-    color: #b71c1c;
+    color: #2e7d32;
   }
   .tagline {
-    color: #b71c1c;
+    color: #2e7d32;
   }
   .card {
     background: #fff;
