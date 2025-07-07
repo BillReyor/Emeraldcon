@@ -164,6 +164,17 @@ ul {
 li::marker {
   color: var(--accent-light);
 }
+.venue-details {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1rem;
+}
+
+.reviews {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
 
 @media (prefers-color-scheme: light) {
   body {
