@@ -10,17 +10,17 @@
 <body>
   <header class="hero">
     <h1>EmeraldCon 2025</h1>
-    <h2>The Unofficial HOPE Afterparty</h2>
+    <h2>The Unofficial <a href="https://hope.net">HOPE</a> Afterparty</h2>
     <p class="tagline">Celebrating our third year!</p>
   </header>
   <main>
     <section id="dates" class="card">
       <h3>Event Dates</h3>
-      <p>August 15&ndash;17, 2025<br><em>Coincides with HOPE_16 at St. John's University, Queens, NY</em></p>
+        <p>August 15&ndash;17, 2025<br><em>Coincides with <a href="https://hope.net">HOPE_16</a> at St. John's University, Queens, NY</em></p>
     </section>
     <section id="venue" class="card">
       <h3>Venue</h3>
-      <p><strong>The Emerald Pub</strong><br>A classic dive bar next to the conference hotel. It's the unofficial HOPE hangout with an authentic Irish pub feel.</p>
+        <p><strong>The Emerald Pub</strong><br>A classic dive bar next to the conference hotel. It's the unofficial <a href="https://hope.net">HOPE</a> hangout with an authentic Irish pub feel.</p>
       <ul class="venue-details">
         <li><strong>Address:</strong> 183-01 Horace Harding Expy, Star Cafe, Queens, NY 11365</li>
         <li><strong>Phone:</strong> +1 718 357 5572</li>
@@ -60,7 +60,7 @@
     </section>
     <section id="why" class="card">
       <h3>Why Attend EmeraldCon?</h3>
-      <p>While HOPE_16 offers a wealth of structured content, EmeraldCon provides a space for organic interactions and relaxed conversations. It's where the community comes together in a more personal setting, away from the formalities of the main conference.</p>
+        <p>While <a href="https://hope.net">HOPE_16</a> offers a wealth of structured content, EmeraldCon provides a space for organic interactions and relaxed conversations. It's where the community comes together in a more personal setting, away from the formalities of the main conference.</p>
     </section>
   </main>
   <footer>
@@ -69,8 +69,7 @@
   <script>
     (function(){
       try {
-        var sequence = [38,40,37,39];
-        var input = [];
+        var triggerKey = 'm';
 
         function initMatrix() {
           var canvas = document.createElement('canvas');
@@ -108,13 +107,8 @@
         }
 
         window.addEventListener('keydown', function(e) {
-          input.push(e.keyCode);
-          if (input.toString().indexOf(sequence.toString()) >= 0) {
-            input = [];
+          if (e.key && e.key.toLowerCase() === triggerKey) {
             initMatrix();
-          }
-          if (input.length > sequence.length) {
-            input.shift();
           }
         });
       } catch (err) {
