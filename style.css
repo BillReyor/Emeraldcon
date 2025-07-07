@@ -175,6 +175,22 @@ li::marker {
   color: #aaa;
 }
 
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid var(--card-border);
+  padding: 0.5rem;
+  text-align: left;
+}
+.schedule-table th {
+  background: var(--accent-color);
+  color: #fff;
+}
+
 
 @media (prefers-color-scheme: light) {
   body {
@@ -205,5 +221,12 @@ li::marker {
   footer {
     background: #e0f2f1;
     color: #004d40;
+  }
+  .schedule-table th {
+    background: #00695c;
+  }
+  .schedule-table th,
+  .schedule-table td {
+    border-color: #ddd;
   }
 }
