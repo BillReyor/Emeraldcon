@@ -9,24 +9,32 @@ body {
   min-height: 100vh;
 }
 
+
 .hero {
-  background: radial-gradient(circle at top, #102030, #000);
+  background: radial-gradient(circle at top, #300, #000);
   text-align: center;
   padding: 4rem 1rem;
-  color: #0ff;
+  color: #ff4d4d;
 }
 
+
 .hero h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Cinzel', serif;
   font-size: 3rem;
   margin: 0;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d;
 }
 
 .hero h2 {
   font-size: 1.5rem;
-  color: #0f0;
-  text-shadow: 0 0 5px #0f0;
+  color: #eee;
+  text-shadow: 0 0 5px #ff4d4d;
+}
+.tagline {
+  font-family: 'Cinzel', serif;
+  color: #ff4d4d;
+  margin-top: 0.5rem;
+  font-style: italic;
 }
 
 main {
@@ -51,6 +59,16 @@ main {
   margin-top: 0;
 }
 
+.v-theme {
+  background: linear-gradient(135deg, rgba(92, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  border-color: #5c0000;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
+}
+
+.v-theme h3 {
+  color: #ff4d4d;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
@@ -73,14 +91,18 @@ li::marker {
     color: #222;
   }
   .hero {
-    background: linear-gradient(135deg, #b2dfdb, #80cbc4);
-    color: #004d40;
+    background: linear-gradient(135deg, #ffebee, #ffcdd2);
+    color: #b71c1c;
   }
   .hero h1 {
     text-shadow: none;
+    font-family: 'Cinzel', serif;
   }
   .hero h2 {
-    color: #00695c;
+    color: #b71c1c;
+  }
+  .tagline {
+    color: #b71c1c;
   }
   .card {
     background: #fff;
